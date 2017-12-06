@@ -18,6 +18,9 @@ public class MainTest {
         ISort insertSort = new InsertSort();
         SortUtil.sortTest("插入排序", insertSort, rawArray);
 
+        ISort shellSort = new ShellSort();
+        SortUtil.sortTest("希尔排序", shellSort, rawArray);
+
         ISort mergeSort = new MergeSort();
         SortUtil.sortTest("归并排序", mergeSort, rawArray);
 
