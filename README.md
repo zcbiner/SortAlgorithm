@@ -1,5 +1,5 @@
 ### SortAlgorithm
-> 七种基本排序算法的实现和总结。
+> 七种基本排序算法的实现和总结。[GitHub地址](https://github.com/zcbiner/SortAlgorithm)
 
 #### 一、冒泡排序
 > 每次比较两个相邻的元素，如果它们的顺序错误就把它们交换过来。
@@ -145,7 +145,7 @@ private void headAdjust(int[] arr, int parent, int len) {
     while ((leftChild = 2 * parent + 1) <= len) {
         rightChild = leftChild + 1;
         maxChild = leftChild;
-        // 将j指向左右子节点中的较大者
+        // 将maxChild指向左右子节点中的较大者
         if (maxChild < len && (arr[leftChild] < arr[rightChild])) {
             maxChild++;
         }
@@ -210,7 +210,18 @@ private void quickSort(int[] arr, int left, int right) {
     }
     arr[left] = arr[i];
     arr[i] = temp;
-    quickSort2(arr, left, i - 1);
-    quickSort2(arr, i + 1, right);
+    quickSort(arr, left, i - 1);
+    quickSort(arr, i + 1, right);
 }
 ```
+
+#### 八、排序算法的比较
+![排序算法比较](http://oxrphyr28.bkt.clouddn.com/sortalgorithm.jpg)
+
+** 参考资料 **
+
+[经典排序算法总结与实现](http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/)
+
+[图解堆排序](http://www.cnblogs.com/MOBIN/p/5374217.html)
+
+[常见排序算法 - 堆排序 (Heap Sort)](http://bubkoo.com/2014/01/14/sort-algorithm/heap-sort/)
