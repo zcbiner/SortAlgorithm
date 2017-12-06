@@ -218,7 +218,7 @@ private void quickSort(int[] arr, int left, int right) {
 #### 八、排序算法的比较
 ![排序算法比较](http://oxrphyr28.bkt.clouddn.com/sortalgorithm.jpg)
 
-** 参考资料 **
+**参考资料**
 
 [经典排序算法总结与实现](http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/)
 
