@@ -13,6 +13,7 @@
 4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
 
 代码实现：
+
 ```
 for (int i = 0; i < arr.length; i++) {
     for (int j = arr.length  - 1; j > i; j--) {
