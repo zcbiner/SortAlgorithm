@@ -20,6 +20,9 @@ public class MainTest {
 
         ISort mergeSort = new MergeSort();
         SortUtil.sortTest("归并排序", mergeSort, rawArray);
+
+        ISort quickSort = new QuickSort();
+        SortUtil.sortTest("快速排序", quickSort, rawArray);
     }
 
 }
