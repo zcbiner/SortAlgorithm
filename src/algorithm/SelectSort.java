@@ -16,9 +16,9 @@ public class SelectSort implements ISort {
                     minIndex = j;
                 }
             }
-//            if (minIndex != i) {
+            if (minIndex != i) {
                 SortUtil.swap(arr, minIndex, i);
-//            }
+            }
         }
 
         return arr;
