@@ -6,8 +6,8 @@ package algorithm;
 public class QuickSort implements ISort {
     @Override
     public int[] sort(int[] arr) {
-//        quickSort(arr, 0, arr.length - 1);
-        quickSort2(arr, 0, arr.length - 1);
+        quickSort(arr, 0, arr.length - 1);
+//        quickSort2(arr, 0, arr.length - 1);
         return arr;
     }
 
@@ -19,16 +19,18 @@ public class QuickSort implements ISort {
     }
 
     private int partition(int[] array, int start, int end) {
-        int sentinel = array[start];
-        int j = start;
-        for (int i = start + 1; i < end; i++) {
-            if (array[i] < sentinel) {
-                SortUtil.swap(array, ++j, i);
+        int pivot = array[end];
+        int tail = start - 1;
+        for (int i = start; i < end; i++) {
+            if (array[i] <= pivot) {
+                SortUtil.swap(array, ++tail, i);
             }
         }
-        SortUtil.swap(array, j, start);
-        return j;
+        SortUtil.swap(array, tail + 1, end);
+        return tail + 1;
     }
+
+    /***********************************************/
 
     private void quickSort2(int[] arr, int left, int right) {
         if (left >= right) return;
