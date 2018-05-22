@@ -17,4 +17,31 @@ public class BubbleSort implements ISort {
         }
         return arr;
     }
+
+    /**
+     * 对冒泡排序进行优化，俗称鸡尾酒排序。
+     * 从低到高再从高到底进行排序
+     * @param arr
+     * @return
+     */
+    public int[] sort1(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            for (int i = left; i < right; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    SortUtil.swap(arr, i, i + 1);
+                }
+            }
+            right--;
+
+            for (int i = right; i > left; i--) {
+                if (arr[i] < arr[i - 1]) {
+                    SortUtil.swap(arr, i, i - 1);
+                }
+            }
+            left++;
+        }
+        return arr;
+    }
 }
